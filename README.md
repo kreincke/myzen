@@ -16,6 +16,6 @@ type `make hs.pdf` for getting the latest version
 
 ## published versions
 
-The directory PDFs contains versions which have been distributed beside the
+The directory `pdfs` contains versions which have been distributed beside the
 github repository
 
