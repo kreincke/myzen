@@ -1,0 +1,1059 @@
+% hannya shingyo cloak file
+%
+% (c) Karsten Reincke, Frankfurt a.M. 2016, ff.
+%
+% This file is licensed under the Creative Commons Attribution 3.0 Germany
+% License (http://creativecommons.org/licenses/by/3.0/de/): Feel free to share
+% (to copy, distribute and transmit) or to remix (to adapt) it, if you respect
+% how you must attribute the work in the manner specified by the author(s):
+%
+% In an internet based reuse please link the reused parts to 
+% http://www.fodina.de/myzen/ and mention the original author Karsten Reincke in 
+% a suitable manner.
+% 
+% In a paper-like reuse please insert into your preface etc. a short hint to
+% http://www.fodina.de/myzen/ and to the original author, Karsten Reincke, .
+% 
+% For normal quotations please use the scientific standard to cite.
+
+\documentclass[
+DIV=calc,
+BCOR=5mm,
+11pt,
+headings=small,
+oneside,
+bibtotocnumbered]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[]{a4,ngerman}
+\usepackage[english,ngerman]{babel}
+\selectlanguage{ngerman}
+
+\usepackage{csquotes}
+
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{btexmat/zenJbibCfgDeInc}
+
+\input{btexmat/zenHyphenationDeInc}
+
+
+% package for improving the grey value and the line feed handling
+\usepackage{microtype}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+\pagestyle{plain}
+%\pagestyle{empty}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+
+%- start(footnote-configuration)
+
+\deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
+
+% package for macking tables with broken lines
+\usepackage{multirow}
+
+%for using label as nameref
+\usepackage{nameref}
+
+%integrate nomenclature
+\input{btexmat/zenNclMetaDefineDeInc}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
+
+\usepackage[encapsulated]{CJK}
+\newcommand{\cntext}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
+
+\newcommand{\cnbkai}[1]{\begin{CJK}{UTF8}{bkai}#1\end{CJK}}
+\newcommand{\cnbsmi}[1]{\begin{CJK}{UTF8}{bsmi}#1\end{CJK}}
+\newcommand{\cngbsn}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
+\newcommand{\jpwada}[1]{\begin{CJK}{UTF8}{wadalab}#1\end{CJK}}
+\newcommand{\jpsong}[1]{\begin{CJK}{UTF8}{song}#1\end{CJK}}
+\newcommand{\jpbkai}[1]{\begin{CJK}{UTF8}{bkai}#1\end{CJK}}
+
+
+\usepackage{arydshln}
+
+\usepackage{geometry}
+
+
+\begin{document}
+
+\newgeometry{left=1.8cm,right=1.8cm,top=1cm,bottom=2.5cm}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{Mit Dank an meine Frau für ihren wunderbaren Mut zu neuen guten
+Wegen:}
+%\subject{ZEN}
+\title{Hannya Shingyō Lerntext}
+\author{Karsten Reincke\input{btexmat/zenLicenseFootnoteInc} 
+ - Release \input{hs.rel} }
+
+\maketitle
+%%-- end(titlepage)
+\section{Der Anlass}
+ 
+Wäre es nicht schön, das \emph{Hannya Shingyo} -- mit anderen zusammen -- auch
+auswendig vortragen zu können? Immerhin hat die Retization dieses Textes im
+(Zen)-Buddhismus eine große Tradition!
+
+Der Weg zum flüssigen Mitsprechen ist holprig: Wie lernt man solch eine sperrige
+Folge japanischer Silben, wie einen so erratischen Textblock? Das Lernen dürfte
+leichter fallen, wenn eine Struktur erkennbar wäre, etwa in einer
+mehrspaltigen, mehrsprachigen, sinnhaft gegliederten Aufbereitung.
+
+Dazu müsste der japanische Text jedoch recht wortgetreu übersetzt sein.
+Denn nur so ließe sich die Übersetzung in einer Zeile mit dem übersetzten
+Satzteil arrangieren. Würden die deutschen mit den japanisch-chinesischen
+Phrasen so auch optisch korrespondieren, erschlössen sich die
+Sinneinheiten direkt.
+
+Trotzdem sollte die Übersetzung auch noch elegant sein: Das \emph{Hannya
+Shingyo} ist ein Lehrtext, ein Sutra. Zuerst dürfte es mündlich vorgetragen
+worden sein, als Ansprache an die Schüler. Mithin wird man darin -- ganz
+sprachunabhängig -- auch rhetorische Elemente finden: Einen Interesse weckenden
+\emph{Einstieg} etwa. Oder eine aufrüttelnde \emph{Kernthese}, die allmähliche
+\emph{Entfaltung} ihrer Feinheiten, und die sich daran anschließende Begründung
+der \emph{Konsequenzen}. Und natürlich einen einprägsamen \emph{Schluss}. Wäre es
+nicht schön, wenn ein \emph{Hannya-Shingyo-Lerntext} auch das noch erkennen
+ließe?
+
+Gleichwohl müsste die Übertragung immer genau bleiben, von der Bedeutung und der
+syntaktischen Struktur her\footnote{Doris Wolter hat dankenswerterweise
+verschiedene Übersetzungen ins Deutsche zusammengetragen.
+(\cite[vgl.][\nopage]{Wolter2010a}) Vergleicht man diese Versionen, offenbaren
+sich erhebliche Unterschiede. Insbesondere das letzte Drittel des Hannya
+Shingyos scheint dabei zu besonders 'poetischen' Übertragungen einzuladen.
+Angesichts der existentiellen philosophischen Dimension des Zen-Buddhismus und
+des Anspruchs auf letztgültige Wahrheiten im \emph{Hannya Shingyo} selbst ist
+das schlicht unzufriedenstellend.}. Sie sollte so wenig als möglich
+interpretieren.
+
+Es gibt wunderbare Übersetzungen: z.B. die von
+Deshimaru\footcite[vgl.][]{Deshimaru1988a}, die eher ein philosophischer
+Hintergrundbericht sein will, als eine pure Übersetzung. Oder die universitär
+abgesicherte, elegante Übertragung von Scheid\footcite[vgl.][]{Scheid2016a}.
+Oder die wortgetreue von Boeck\footcite[vgl.][]{Boeck2016a}.
+
+Nur liefern sie alle leider keinen mehrsprachigen, sinnhaft gegliederten
+Lerntext, der bei aller Worttreue auch noch die elegante Rhetorik des Originals
+erahnen ließe. Wie wäre es also mit folgender Variante?
+
+\newpage
+\section{Der Text} 
+
+\sffamily
+
+\begin{center}
+\begin{tabular}{r|rl|rl|rl}
+~ & \multicolumn{6}{l}{\textsc{Der Titel:}}\\
+\hline
+{\tiny\texttt{001}}&
+  \multicolumn{2}{l|}{\cnbsmi{摩}  \cnbsmi{訶} \cnbsmi{般} \cnbsmi{若}} &
+  \multicolumn{2}{l|}{\textbf{ma kā}  \textbf{han nya}} &
+  \textrm{\emph{[Die]}}& \textrm{maha prajñā \emph{= höchste Weisheit}}\\
+{\tiny\texttt{002}}&
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多} & 
+  ~ & \textbf{ha ra mi tā} & 
+  {\tiny \textrm{($\rightarrow$)}} & 
+    \textrm{pāramitā\emph{, die über sich hinausführt,}}\\
+{\tiny\texttt{003}}& 
+  ~ & \cnbsmi{心} \cnbsmi{經} &
+  ~ & \textbf{shin gyō} & 
+  \textrm{\emph{[als das]}} & \textrm{essentielle Sutra \emph{[schlechthin]}} \\
+\hline
+~ & \multicolumn{6}{l}{\textsc{Das Manifest:}}\\
+\hline
+{\tiny\texttt{004}}& 
+~ & ~  & ~ & ~ &
+  \textrm{Indem} {\tiny \textrm{($\rightarrow$)}} & \textrm{\emph{[ein der]}} \\
+{\tiny\texttt{005}}&
+  ~ & \cnbsmi{觀} \cnbsmi{自} \cnbsmi{在} & 
+  ~ & \textbf{kan ji zai} & 
+  {\tiny \textrm{($\rightarrow$)}} &
+    \textrm{freien Sicht \emph{[zugewandter]}} \\
+{\tiny\texttt{006}}&
+  ~ & \cnbsmi{菩} \cnbsmi{薩} \cnbsmi{。}& 
+  ~ & \textbf{bo} \textbf{sa}.& 
+  ~ & \textrm{\emph{[lebender Buddha, ein]} Bodhisattva} \\  
+{\tiny\texttt{007}}& 
+  ~ & \cnbsmi{行} \cnbsmi{深} &
+  ~ & \textbf{gyō} \textbf{jin} & 
+  ~ & \textrm{tief \emph{[und gründlich]} praktizierend} \\  
+{\tiny\texttt{008}}& 
+  ~ & \cnbsmi{般} \cnbsmi{若} & 
+  ~ & \textbf{han nya} & 
+  ~ & \textrm{\emph{[die]} Prajñā \emph{, Weisheit}} \\  
+{\tiny\texttt{009}} &
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多}& 
+  ~ & \textbf{ha ra mi ta} & 
+  ~ & \textrm{Pāramitā \emph{, die über sich hinausführt,}} \\  
+{\tiny\texttt{010}}&
+  ~ & ~  & ~ & ~ &  ~ & \textrm{\emph{[lebt]}} \\
+{\tiny\texttt{011}}&
+  \cnbsmi{時}&\cnbsmi{。} &
+  \textbf{ji}. & ~ &
+  {\tiny \textrm{($\rightarrow$)}} & ~ \\
+{\tiny\texttt{012}}& 
+  ~ & ~ & ~ & ~ & ~ & \textrm{\emph{[kommt es bei ihm zum]}} \\
+{\tiny\texttt{013}}& 
+  ~ & \cnbsmi{照} \cnbsmi{見} &
+  ~ & \textbf{shō ken} &
+  ~ & \textrm{erleuchteten Sehen \emph{[, dass die]}} \\  
+{\tiny\texttt{014}}& 
+  ~ & \cnbsmi{五} \cnbsmi{蘊} & 
+  ~ & \textbf{go on} & 
+  {\tiny \textrm{($\rightarrow$)}} & \textrm{5 Skandas}  \\
+{\tiny\texttt{015}}&
+  ~ & \cnbsmi{皆} \cnbsmi {空} \cnbsmi{。} &
+  ~ & \textbf{kai kū}. & 
+  ~ & \textrm{alle leer \emph{[sind]}} \\
+{\tiny\texttt{016}}&
+  \cnbsmi{度} & ~ &
+  \textbf{do} & ~ &
+  \textrm{\emph{[und]} so} & ~ \\
+{\tiny\texttt{017}}&
+  ~ & \cnbsmi{一} \cnbsmi{切} &
+  ~ & \textbf{is sai} &
+  ~ & \textrm{entfernt \emph{[er]}} \\
+{\tiny\texttt{018}}&
+  ~ & \cnbsmi{苦} \cnbsmi{厄} \cnbsmi{。} & ~ &
+  \textbf{ku yaku}. & 
+  ~ & \textrm{Leiden \emph{[und]} Unheil.} \\
+\hline
+  ~ & \multicolumn{6}{l}{\textsc{Die Kernthese:}}\\
+\hline
+{\tiny\texttt{019}}&
+  \multicolumn{2}{l|}{\cnbsmi{舍} \cnbsmi{利} \cnbsmi{子}\cnbsmi{。}}  &
+  \multicolumn{2}{l|}{\textbf{sha ri shi}.} & ~ &
+  \textrm{Shariputra!}\\
+\hline  
+{\tiny\texttt{020}}&
+  ~ & ~ & ~ & ~ & 
+  \multicolumn{2}{l}{\textrm{\emph{[Die 1. der 5 Skandas, nämlich die]}}} \\
+{\tiny\texttt{021}}&
+  ~ & \cnbsmi{色} & 
+  {\tiny \textrm{($\rightarrow$)}} & \textbf{shiki} &
+  ~ & \textrm{Erscheinung} \\  
+{\tiny\texttt{022}}&
+  \cnbsmi{不} & \cnbsmi{異} & 
+  \textbf{fu} & \textbf{i} &
+  \textrm{\emph{[ist]} nicht} & \textrm{getrennt \emph{[von]}} \\  
+{\tiny\texttt{023}}&
+  ~ & \cnbsmi{空} \cnbsmi{。} &
+  {\tiny \textrm{($\rightarrow$)}} & \textbf{kū}.  &
+  {\tiny \textrm{($\rightarrow$)}} & \textrm{kū, \emph{[der Leere]}} \\
+\hdashline
+{\tiny\texttt{024}}&
+  ~ & \cnbsmi{空} &
+  ~ & \textbf{kū} & 
+  \textrm{\emph{[und]}} & \textrm{kū, \emph{[die Leere]}} \\
+{\tiny\texttt{025}}&
+  \cnbsmi{不} & \cnbsmi{異} &
+  \textbf{fu} & \textbf{i} &
+  \textrm{\emph{[ist]} nicht} & \textrm{getrennt \emph{[von]}} \\  
+{\tiny\texttt{026}}&
+  ~ & \cnbsmi{色} \cnbsmi{。} &
+  ~ & \textbf{shiki}. &
+  ~ & \textrm{\emph{[der]} Erscheinung.} \\
+\hline
+{\tiny\texttt{027}}&
+  ~ & ~ & ~ & ~ & \multicolumn{2}{l}{\textrm{~\emph{Ja, mehr noch:}}}  \\  
+{\tiny\texttt{028}}&
+  ~ & \cnbsmi{色} &
+  ~ & \textbf{shiki} & 
+  ~ & \textrm{\emph{[Die]} Erscheinung} \\  
+{\tiny\texttt{029}}&
+  \cnbsmi{即} & \cnbsmi{是} & 
+  \textbf{soku} & \textbf{ze} &
+  \textrm{ist} & \textrm{eigentlich} \\  
+{\tiny\texttt{030}}&
+  ~ & \cnbsmi{空} \cnbsmi{。} &
+  ~ & \textbf{kū}. &
+  ~ & \textrm{kū, \emph{[die Leere]}} \\
+ \hdashline
+ {\tiny\texttt{031}}&
+  ~ & \cnbsmi{空} &
+  ~ & \textbf{kū} & 
+  \textrm{\emph{[und]}} & \textrm{kū, \emph{[die Leere]}} \\
+{\tiny\texttt{032}}&
+  \cnbsmi{即} & \cnbsmi{是} & 
+  \textbf{soku} & \textbf{ze} &
+  \textrm{ist} & \textrm{eigentlich} \\  
+{\tiny\texttt{033}}&
+ ~ & \cnbsmi{色} \cnbsmi{。} &
+ ~ & \textbf{shiki}. &~
+ ~ & \textrm{\emph{[die]} Erscheinung.} \\
+ \hline
+ {\tiny\texttt{034}}&
+    ~ & ~ & ~ & ~ & \multicolumn{2}{l}{
+    \textrm{\emph{[Und bei den anderen 4 Skandas, also beim]}}}\\
+ {\tiny\texttt{035}}&
+  ~ & \cnbsmi{受} &
+  ~ & \textbf{ju} &
+  ~ & \textrm{Empfinden,} \\
+{\tiny\texttt{036}}&
+  ~ & \cnbsmi{想} &
+  ~ & \textbf{sō} &
+  ~ & \textrm{Wahrnehmen,} \\
+ {\tiny\texttt{037}}&
+  ~ & \cnbsmi{行} &
+  ~ & \textbf{gyō} &
+  ~ & \textrm{Wollen \emph{[und]}} \\
+ {\tiny\texttt{038}}&
+  ~ & \cnbsmi{識} &
+  ~ & \textbf{shiki}. &
+  ~ & \textrm{Unterscheiden}, \\
+{\tiny\texttt{039}}&
+  \cnbsmi{亦} & \cnbsmi{復} \cnbsmi{如} \cnbsmi{是} \cnbsmi{。} &
+  \textbf{yaku} & \textbf{bu nyo ze}. &
+  \textrm{auch \emph{[da]}} & \textrm{ist \emph{[es]} wieder gleich}. \\
+\hline
+  ~ & \multicolumn{6}{l}{\textsc{Die ex negativo Definition von \textrm{kū}:}}\\
+\hline
+{\tiny\texttt{040}} &
+  \multicolumn{2}{l|}{\cnbsmi{舍} \cnbsmi{利} \cnbsmi{子} \cnbsmi{。}} &
+  \multicolumn{2}{l|}{\textbf{sha ri shi}.} &
+  ~ & \textrm{Shariputra!}\\
+\hline
+{\tiny\texttt{041}}&
+  \cnbsmi{是} & \cnbsmi{諸} &
+  \textbf{ze} & \textbf{sho} &
+  \textrm{\emph{[Es]} ist} & \textrm{alles} \\
+{\tiny\texttt{042}}&
+  ~ & \cnbsmi{法} &
+  ~ & \textbf{hō} &
+  ~ & \textrm{Seiende} \\
+{\tiny\texttt{043}}&
+  ~ & \cnbsmi{空} \cnbsmi{相} \cnbsmi{。} &
+  ~ & \textbf{kū sō}. &
+  ~ & \textrm{\emph{[ein]} Aspekt \emph{[von]} kū}: \\
+\hdashline
+{\tiny\texttt{044}}&
+  \cnbsmi{不} & \cnbsmi{生} &
+  \textbf{fu} & \textbf{shō} & 
+  \textrm{nicht} & \textrm{geboren \emph{[bzw.]} geschaffen} \\
+{\tiny\texttt{045}}&
+  \cnbsmi{不} & \cnbsmi{滅} \cnbsmi{。} &
+  \textbf{fu} & \textbf{metsu}. &
+  \textrm{nicht} & \textrm{gestorben \emph{[bzw.]} ausgelöscht},\\
+\hdashline
+{\tiny\texttt{046}}&
+  \cnbsmi{不} & \cnbsmi{垢} &
+  \textbf{fu} & \textbf{ku} &
+  \textrm{nicht} & \textrm{befleckt} \\
+{\tiny\texttt{047}}&
+  \cnbsmi{不} & \cnbsmi{淨} &
+  \textbf{fu} & \textbf{jō}. &
+  \textrm{nicht} & \textrm{rein}, \\
+\hdashline
+\end{tabular}
+
+\begin{tabular}{r|rl|rl|rl}
+\hdashline
+{\tiny\texttt{048}}&
+  \cnbsmi{不} & \cnbsmi{增} &
+  \textbf{fu} & \textbf{zō} &
+  \textrm{nicht} & \textrm{zunehmend} \\
+{\tiny\texttt{049}}&
+  \cnbsmi{不} & \cnbsmi{減} &
+  \textbf{fu} & \textbf{gen}. &
+  \textrm{nicht} & \textrm{abnehmend}. \\
+\hline
+{\tiny\texttt{050}}&
+  \cnbsmi{是} & \cnbsmi{故} &
+  \textbf{ze} & \textbf{ko} &
+  \textrm{Mithin} & {\tiny ($\rightarrow$)} \textrm{\emph{[gibt es]}}\\
+{\tiny\texttt{051}}&
+  ~ & \cnbsmi{空} \cnbsmi{中} \cnbsmi{。} &
+  ~ & \textbf{kū chū}. &
+  ~ & \textrm{in kū} \\
+{\tiny\texttt{052}}&
+  ~ & ~  & ~ & ~ &  ~ & \textrm{\emph{[keines der 5 Skandhas, also]}} \\
+{\tiny\texttt{053}}&
+  \cnbsmi{無} & \cnbsmi{色} \cnbsmi{。} &
+  \textbf{mu} & \textbf{shiki} &
+  \textrm{kein} & \textrm{Erscheinen}, \\
+{\tiny\texttt{054}}&
+  \cnbsmi{無} & \cnbsmi{受} &
+  \textbf{mu} & \textbf{ju} & 
+  \textrm{kein} & \textrm{Empfinden,} \\
+{\tiny\texttt{055}}&
+  ~ & \cnbsmi{想} &
+  ~ & \textbf{sō} &
+  ~ & \textrm{Wahrnehmen,} \\
+{\tiny\texttt{056}}&
+  ~ & \cnbsmi{行} &
+  ~ & \textbf{gyō} &
+  ~ & \textrm{Wollen \emph{[oder]}} \\
+{\tiny\texttt{057}}&
+  ~ & \cnbsmi{識} \cnbsmi{。} &
+  ~ & \textbf{shiki}. & 
+  ~ & \textrm{Unterscheiden}, \\
+\hdashline
+ {\tiny\texttt{058}}&
+  \cnbsmi{無} & \cnbsmi{眼} &
+  \textbf{mu} & \textbf{gen} &
+  \textrm{keine} & \textrm{Augen,} \\
+{\tiny\texttt{059}}&
+  ~ & \cnbsmi{耳} &
+  ~ & \textbf{ni} &
+  ~ & \textrm{Ohren,} \\
+{\tiny\texttt{060}}&
+  ~ & \cnbsmi{鼻} &
+  ~ & \textbf{bi} &
+  ~ & \textrm{Nase,} \\
+{\tiny\texttt{061}}&
+  ~ & \cnbsmi{舌} &
+  ~ & \textbf{ze} &
+  ~ & \textrm{Zunge,} \\
+{\tiny\texttt{062}}&
+  ~ & \cnbsmi{身} &
+  ~ & \textbf{shin} &
+  \textrm{\emph{[keinen]}} & \textrm{Tastsinn \emph{[und]}} \\
+{\tiny\texttt{063}}&
+  ~ & \cnbsmi{意} \cnbsmi{。} &
+  ~ & \textbf{i}. & 
+  \textrm{\emph{[kein]}} & \textrm{Denkvermögen}. \\
+\hdashline
+{\tiny\texttt{064}}&
+   \cnbsmi{無} & \cnbsmi{色} &
+   \textbf{mu} & \textbf{shiki} &
+   \textrm{keine} & \textrm{Farbe,} \\
+{\tiny\texttt{065}}&
+   ~ & \cnbsmi{聲} &
+   ~ & \textbf{shō} &
+   \textrm{\emph{[keinen]}} & \textrm{Klang,} \\
+{\tiny\texttt{066}}&
+   ~ & \cnbsmi{香} &
+   ~ & \textbf{kō} &
+   ~ & \textrm{Geruch,} \\
+{\tiny\texttt{067}}&
+  ~ & \cnbsmi{味} &
+  ~ & \textbf{mi} &
+  ~ & \textrm{Geschmack,} \\
+{\tiny\texttt{068}}&
+  ~ & \cnbsmi{觸} &
+  ~ & \textbf{soku} & 
+  \textrm{\emph{[keine]}} & \textrm{Berührung \emph{[und]}} \\
+{\tiny\texttt{069}}&
+  ~ & \cnbsmi{法} \cnbsmi{。} &
+  ~ & \textbf{hō}.&
+  \textrm{\emph{[keinen]}} & \textrm{Gedanken}; \\
+\hline
+{\tiny\texttt{070}}&
+  ~ & ~ & ~ & ~ & ~ & \textrm{\emph{[Also gibt es in kū]}} \\
+\hdashline
+{\tiny\texttt{071}}&
+  \cnbsmi{無} & \cnbsmi{眼} \cnbsmi{界} \cnbsmi{。} &
+  \textbf{mu} & \textbf{gen kai} &
+  \textrm{nicht} & \textrm{die sichtbare Welt} {\tiny ($\rightarrow$)} \\
+{\tiny\texttt{072}}&
+  \cnbsmi{乃}\cnbsmi{至} & ~ & 
+  \textbf{nai shi} & ~ &
+  \textrm{\emph{[und]} {\tiny ($\rightarrow$)}} & 
+   \textrm{darum insbesondere [auch]}\\
+{\tiny\texttt{073}}&
+  \cnbsmi{無} & \cnbsmi{意} \cnbsmi{識} \cnbsmi{界} \cnbsmi{。}&
+  \textbf{mu} & \textbf{i shiki kai}.&
+  \textrm{nicht} & 
+    \textrm{die Welt der Vorstellungen {\tiny ($\rightarrow$)}} \\
+\hdashline
+{\tiny\texttt{074}}&
+  \cnbsmi{無} & \cnbsmi{無} \cnbsmi{明} \cnbsmi{。} &
+  \textbf{mu} & \textbf{mu myō} &
+  \textrm{kein} & \textrm{Nicht-Wissen \emph{[und]}} \\
+{\tiny\texttt{075}}&
+  \cnbsmi{亦} & ~ & 
+  \textbf{yaku} & ~ &
+  \textrm{auch} & ~ \\  
+{\tiny\texttt{076}}&
+  \cnbsmi{無} & \cnbsmi{無} \cnbsmi{明} \cnbsmi{盡} \cnbsmi{。} &
+  \textbf{mu} & \textbf{mu myō jin.} &
+  \textrm{kein} & \textrm{Ende vom Nicht-Wissen} {\tiny ($\rightarrow$)} \\
+\hdashline
+{\tiny\texttt{077}}&
+  \cnbsmi{乃}\cnbsmi{至} & ~ & 
+  \textbf{nai shi} & ~ &
+  \textrm{\emph{[und]} {\tiny ($\rightarrow$)}} & 
+   \textrm{darum insbesondere \emph{[auch]}}\\
+\hdashline
+{\tiny\texttt{078}}&
+  \cnbsmi{無} & \cnbsmi{老} \cnbsmi{死} \cnbsmi{。} &
+  \textbf{mu} & \textbf{rō shi} &
+  \textrm{kein} & \textrm{Altern und Tod \emph{[und]}} \\
+{\tiny\texttt{079}}&
+  \cnbsmi{亦} & ~ &
+  \textbf{yaku} & ~ &
+  \textrm{auch} & ~ \\
+{\tiny\texttt{080}}&
+  \cnbsmi{無} & \cnbsmi{老} \cnbsmi{死} \cnbsmi{盡} \cnbsmi{。} &
+  \textbf{mu} &
+  \textbf{rō shi jin}. &
+  \textrm{kein} & \textrm{Ende von Altern und Tod {\tiny ($\rightarrow$)}}\\
+\hline
+{\tiny\texttt{081}}&
+  \cnbsmi{無} & \cnbsmi{苦} & 
+  \textbf{mu} & \textbf{ku} &
+  \textrm{kein} & \textrm{Leiden,} \\  
+{\tiny\texttt{082}}&
+  ~ & \cnbsmi{集} &
+  ~ & \textbf{shū} & 
+  ~ & \textrm{Anhäufen,} \\  
+{\tiny\texttt{083}}&
+  ~ & \cnbsmi{滅} &
+  ~ & \textbf{metsu} & 
+  ~ & \textrm{Verlöschen \emph{[und]}} \\  
+{\tiny\texttt{084}}&
+  ~ & \cnbsmi{道} \cnbsmi{。} & 
+  ~ & \textbf{dō}. &
+  \textrm{\emph{[keinen]}} & \textrm{Weg,} \\
+\hdashline 
+{\tiny\texttt{085}}&
+  \cnbsmi{無} & \cnbsmi{智} &
+  \textbf{mu} & \textbf{chi} &
+  \textrm{keine} & \textrm{Erkenntnis \emph{[und]}} \\  
+{\tiny\texttt{086}}&
+  \cnbsmi{亦} & ~ &
+  \textbf{yaku} & ~ &
+  \textrm{auch} & ~ \\
+{\tiny\texttt{087}}&
+  \cnbsmi{無} & \cnbsmi{得} \cnbsmi{。} &
+  \textbf{mu} & \textbf{toku}. &
+  \textrm{keinen} & \textrm{Gewinn,} \\  
+{\tiny\texttt{088}}&
+  \cnbsmi{以} & ~ &
+  \textbf{I} & ~ &
+  \textrm{weil} &  \textrm{\emph{[kū]}} \\  
+{\tiny\texttt{089}}&
+  \cnbsmi{無} & \cnbsmi{所} \cnbsmi{得}  &
+  \textbf{mu} & \textbf{sho tok}u  &
+  \textrm{kein} & \textrm{Ort \emph{[des]} Gewinnens \emph{[ist]}.} \\
+\hline
+  ~ & \multicolumn{6}{l}{\textsc{Die praktische Konsequenz:}}\\
+\hline
+{\tiny\texttt{090}}&
+  \cnbsmi{故}\cnbsmi{。} & 
+    \cnbsmi{菩} \cnbsmi{提} \cnbsmi{薩} \cnbsmi{捶}\cnbsmi{。}  &
+  \textbf{ko}. & \textbf{bo dai sat ta.} &
+  \textrm{Darum} & 
+    \textrm{\emph{[gilt:] [Ein]} Bodhisattva \emph{[zu sein,]}}\\
+{\tiny\texttt{091}}&
+  ~ & \cnbsmi{依} &
+  ~ & \textbf{e} & 
+  ~ & \textrm{bedingt \emph{[die]}} \\
+\newline
+{\tiny\texttt{092}}&
+  ~ & \cnbsmi{般} \cnbsmi{若}  &
+  ~ & \textbf{han nya} &
+  ~ & \textrm{Prajñā \emph{Weisheit}} \\  
+{\tiny\texttt{093}}&
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多} &
+  ~ & \textbf{ha ra mi ta} &
+  ~ & \textrm{Pāramitā\emph{, die über sich hinausführt.}} \\
+\hdashline
+{\tiny\texttt{095}}&
+  \cnbsmi{故}\cnbsmi{。} & 
+    \cnbsmi{心} \cnbsmi{無} \cnbsmi{罫} \cnbsmi{礙} \cnbsmi{。} &
+  \textbf{ko.} & \textbf{shin mu kei ge} &
+  \textrm{Darum} & 
+    \textrm{\emph{[wird sein]} Geist nicht behindert.} \\
+\hdashline
+{\tiny\texttt{096}}&
+  ~ & \cnbsmi{無} \cnbsmi{罫} \cnbsmi{礙} & 
+  ~ & \textbf{mu kei ge} & 
+ \multicolumn{2}{l}
+  {\textrm{\emph{[Und da der]} nicht behindert \emph{[wird]},}}\\
+{\tiny\texttt{097}}&
+  \cnbsmi{故}\cnbsmi{。} & \cnbsmi{無} \cnbsmi{有} & 
+  \textbf{ko.} & \textbf{mu u }& 
+  \textrm{darum} & \textrm{hat \emph{[der Bodhisattva]} keine} \\
+{\tiny\texttt{098}}&
+  ~ & \cnbsmi{恐} \cnbsmi{怖}\cnbsmi{。} &
+  ~ & \textbf{ku fu} &
+  ~ & \textrm{Furcht}. \\ 
+\hline
+\end{tabular}
+
+\begin{tabular}{r|rl|rl|rl}
+\hdashline
+{\tiny\texttt{099}}&
+  ~ & \cnbsmi{遠} \cnbsmi{離} &
+  ~ & \textbf{on ri} &
+  \textrm{\emph{[Das]}} & \textrm{übersteigend\emph{[, was er sich]}} \\      
+{\tiny\texttt{100}}&
+  ~ & \cnbsmi{一} \cnbsmi{切} &
+  ~ & \textbf{is sai} & 
+  ~ & \textrm{entfernt \emph{[hat -- nämlich]} }\\
+{\tiny\texttt{101}}&
+  ~ & \cnbsmi{顛} \cnbsmi{倒} &
+  ~ & \textbf{ten dō} &
+  ~ & \textrm{Täuschungen \emph{[und]}} \\      
+{\tiny\texttt{102}}&
+  ~ & \cnbsmi{夢} \cnbsmi{想} \cnbsmi{。} &
+  ~ & \textbf{mu sō}. &
+  ~  & \textrm{Illusionen \emph{[--]}} \\      
+{\tiny\texttt{103}}&
+  ~ & \cnbsmi{究} \cnbsmi{竟} &
+  ~ & \textbf{ku gyō} &
+  ~ & \textrm{erreicht \emph{[er]} schließlich } \\      
+{\tiny\texttt{104}}&
+  ~ & \cnbsmi{涅} \cnbsmi{槃} \cnbsmi{。}&
+  ~ & \textbf{ne han}. &
+  ~  & \textrm{\emph{[das]} Nirvana.} \\      
+\hline   
+{\tiny\texttt{105}}&
+  ~ & \cnbsmi{三} \cnbsmi{世} &
+  ~ & \textbf{san ze} &
+  \textrm{\emph{[Zudem]}} & \textrm{\emph{[gilt seit]} drei Zeitaltern} \\      
+{\tiny\texttt{106}}&
+  ~ & \cnbsmi{諸} \cnbsmi{佛} \cnbsmi{。} &
+  ~ & \textbf{sho butsu} &
+  \textrm{\emph{für}} & 
+    \textrm{alle Buddhas: \emph{ihre Buddhaschaft}} \\     
+ {\tiny\texttt{107}}&
+  ~ & \cnbsmi{依} &
+  ~ & \textbf{e} &
+  ~ & \textrm{bedingt \emph{[die]}} \\  
+{\tiny\texttt{108}}&
+  ~ & \cnbsmi{般} \cnbsmi{若}  &
+  ~ & \textbf{han nya} &
+  ~ & \textrm{Prajñā \emph{(Weisheit)}} \\  
+{\tiny\texttt{109}}&
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多} &
+  ~ & \textbf{ha ra mi ta} &
+  ~ & \textrm{Pāramitā\emph{, die über sich hinausführt.}} \\
+\hline  
+{\tiny\texttt{110}}&
+  \cnbsmi{故}\cnbsmi{。} & \cnbsmi{得} &
+  \textbf{ko}. & \textbf{toku} &
+  \textrm{Darum} & \textrm{gewinnen sie die} \\  
+{\tiny\texttt{111}}&
+  ~ & \cnbsmi{阿} \cnbsmi{耨} \cnbsmi{多} \cnbsmi{羅} & 
+  ~ & \textbf{a noku ta ra} &
+  {\tiny ($\rightarrow$)} & \textrm{anuttara} \textrm{\emph{höchste}} \\
+{\tiny\texttt{112}}&
+  ~ & \cnbsmi{三} \cnbsmi{藐} &
+  ~ & \textbf{san myaku} &
+  {\tiny ($\rightarrow$)} & \textrm{samyak} \textrm{\emph{vollkommene}} \\      
+{\tiny\texttt{113}}&
+  ~ & \cnbsmi{三} \cnbsmi{菩} \cnbsmi{提} \cnbsmi{。} &
+  ~ & \textbf{san bo dai}. &
+  {\tiny ($\rightarrow$)} & \textrm{sambodhi} \textrm{\emph{Erleuchtung}} \\ 
+ \hline 
+{\tiny\texttt{114}}&
+  \cnbsmi{故} & \cnbsmi{知} &
+  \textbf{ko} & \textbf{chi} &
+  \textrm{Darum} &  \textrm{wisse \emph{[nun Du Deinerseits:]}} \\  
+{\tiny\texttt{115}}&
+  ~ & \cnbsmi{般} \cnbsmi{若} &
+  ~ & \textbf{han nya} &
+  \textrm{\emph{[Das]}} & \textrm{Prajñā} {\tiny ($\rightarrow$)} \\  
+{\tiny\texttt{116}}&
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多}&
+  ~ & \textbf{ha ra mi ta}.&
+  ~ & \textrm{Pāramitā} {\tiny ($\rightarrow$)} \\ 
+{\tiny\texttt{117}}&
+  \cnbsmi{是} & \cnbsmi{大} \cnbsmi{神} \cnbsmi{咒} \cnbsmi{。} &
+  \textbf{ze} & \textbf{dai jin shu}. &
+  \textrm{ist} & \textrm{\emph{[ein]} großes wunderbares Mantra}; \\  
+{\tiny\texttt{118}}&
+  \cnbsmi{是} & \cnbsmi{大} \cnbsmi{明} \cnbsmi{咒} &
+  \textbf{ze} & \textbf{dai myō shu}. &
+  \textrm{\emph{[es]} ist} & \textrm{\emph{[ein]} großes leuchtendes Mantra}, \\ 
+{\tiny\texttt{119}}&
+  \cnbsmi{是} & \cnbsmi{無} \cnbsmi{上} \cnbsmi{咒} \cnbsmi{。} &
+  \textbf{ze} & \textbf{mu jō shu}. &
+  \textrm{\emph{[es]} ist} & 
+    \textrm{\emph{[das]} {\tiny ($\rightarrow$)} höchste Mantra} \\
+{\tiny\texttt{120}}&
+  \cnbsmi{是} & \cnbsmi{無} \cnbsmi{等} \cnbsmi{等} \cnbsmi{咒} \cnbsmi{。}  &
+  \textbf{ze} &  \textbf{mu tō dō shu}.  &
+  \textrm{\emph{[es]} ist} & \textrm{\emph{[das]} nicht übersteigbare Mantra} \\  
+{\tiny\texttt{121}}&
+  ~ & \cnbsmi{能} & 
+  ~ & \textbf{nō} &  
+  ~ \textrm{\emph{[es]}} & \textrm{dient \emph{[dem]}} \\
+{\tiny\texttt{122}}&
+  ~ & \cnbsmi{除} \cnbsmi{一} \cnbsmi{切} & 
+  ~ & \textbf{jo is sai} & 
+  ~ & \textrm{Beseitigen \emph{[und]} Abschneiden} \\
+{\tiny\texttt{123}}&
+  ~ & \cnbsmi{苦} \cnbsmi{。} & 
+  ~ & \textbf{ku}. & 
+ ~ & \textrm{\emph{[von]} Leiden.} \\
+\hline 
+  ~ & \multicolumn{6}{l}{\textsc{Das Fazit \ldots}}\\
+\hline
+{\tiny\texttt{124}}&
+  ~ & ~ & ~ & ~ &  & \textrm{\emph{[Und weil dies]}} \\      
+{\tiny\texttt{125}}&
+  ~ & \cnbsmi{真} \cnbsmi{實} &
+  ~ & \textbf{shin jitsu}  &
+  ~ & \textrm{wirklich \emph{[und]} {\tiny ($\rightarrow$)}} \\  
+{\tiny\texttt{126}}&
+  ~ & \cnbsmi{不} \cnbsmi{虛} \cnbsmi{。}&
+  ~ & \textbf{fu ko} &
+  ~ & \textrm{nicht unwahr \emph{[ist,]}} \\
+{\tiny\texttt{127}}&
+  \cnbsmi{故} & ~ &
+  \textbf{ko} & ~ &
+  \textrm{darum} & \textrm{\emph{[wird die]} }\\  
+{\tiny\texttt{128}}&
+  ~ & \cnbsmi{說} & 
+  ~ & \textbf{setsu} &
+  ~ & \textrm{Bedeutung \emph{[der]}} \\  
+ {\tiny\texttt{129}}&
+  ~ & \cnbsmi{般} \cnbsmi{若} &
+  ~ & \textbf{han nya} &
+  ~ & \textrm{Prajñā} \\  
+{\tiny\texttt{130}}&
+  ~ & \cnbsmi{波} \cnbsmi{羅} \cnbsmi{蜜} \cnbsmi{多}&
+  ~ & \textbf{ha ra mi ta} &
+  ~ & \textrm{Pāramitā} \\ 
+{\tiny\texttt{131}}&
+  ~ & \cnbsmi{咒} &
+  ~ & \textbf{shu}. & 
+  \textrm{\emph{[als]}} & \textrm{Mantra} \\
+{\tiny\texttt{132}}&
+  \cnbsmi{即} & ~ & 
+  \textbf{soku} & ~ &
+  \multicolumn{2}{l}{\textrm{eigentlich \emph{[auch durch die]}}} \\  
+{\tiny\texttt{133}}&
+  ~ & \cnbsmi{說} &
+  ~ & \textbf{setsu} & 
+  ~ & \textrm{Bedeutung \emph{[des nun}}\\
+{\tiny\texttt{134}}&
+  ~ & \cnbsmi{咒} &
+  ~ & \textbf{shu}  & 
+  ~ & \textrm{\emph{folgenden]} Mantras} \\
+{\tiny\texttt{135}}&
+  ~ & \cnbsmi{曰} &
+  ~ & \textbf{watsu} & 
+  ~ & \textrm{ausgesagt:} \\ 
+\hline
+\end{tabular}
+
+\begin{tabular}{r|rl|rl|rl}
+\hline
+  ~ & \multicolumn{6}{l}{\textsc{\ldots in Form eines Mantras:}}\\
+\hline
+{\tiny\texttt{136}}&
+  ~ & ~ & ~ & ~ & ~ & \textrm{\emph{Lasst uns}} \\
+{\tiny\texttt{137}}&
+  ~ & \cnbsmi{羯} \cnbsmi{諦}&
+  ~ & \textbf{gya tei} &
+  ~ & \textrm{hinübergehen,} \\  
+{\tiny\texttt{138}}&
+  ~ & \cnbsmi{羯} \cnbsmi{諦}&
+  ~ & \textbf{gya tei} &
+  ~ & \textrm{hinübergehen,} \\  
+{\tiny\texttt{139}}&
+  \cnbsmi{波} \cnbsmi{羅} & \cnbsmi{羯} \cnbsmi{諦}&
+  \textbf{ha ra} & \textbf{gya tei} &
+  \multicolumn{2}{l}{\textrm{mit anderen hinübergehen,}} \\
+{\tiny\texttt{140}}&
+  \cnbsmi{波} \cnbsmi{羅} \cnbsmi{僧} & \cnbsmi{羯} \cnbsmi{諦}&
+  \textbf{ha ra sō} & \textbf{gya tei} &
+  \multicolumn{2}{l}{\textrm{mit anderen vollständig hinübergehen,}} \\
+ \hdashline
+ {\tiny\texttt{141}}&
+  \cnbsmi{菩} \cnbsmi{提} \cnbsmi{薩} & \cnbsmi{婆} \cnbsmi{訶}&
+  \textbf{bo ji} & \textbf{so wa ka} &
+  \textrm{\emph{auf dem}} & \textrm{Weg \emph{zur} Vollendung.} \\
+ \hline
+   ~ & \multicolumn{6}{l}{\textsc{Punkt}}\\
+ \hline
+ {\tiny\texttt{142}}& 
+  ~ & \cnbsmi{般} \cnbsmi{若} &
+  ~ & \textbf{han nya} &
+  \textrm{\emph{[So die]}}& \textrm{prajñā \emph{, Weisheit}}\\
+{\tiny\texttt{143}}& 
+  ~ & \cnbsmi{心} \cnbsmi{經} &
+  ~ & \textbf{shin gyō}. & 
+  \textrm{\emph{[als]}} & \textrm{essentielles Sutra} \\
+ \hline 
+%\end{longtable}
+\end{tabular}
+\end{center}
+\rmfamily
+
+\section{Die Gestaltung} 
+
+In der linken Spalte meiner Lernversion des Hannya Shingyos steht der
+chinesische Text. Er folgt dem universitär abgesicherten Text von
+Scheid\footcite[vgl.][\nopage]{Scheid2016a} und ist -- entsprechend der
+europäischen Tradition -- von links nach rechts und von oben nach unten zu
+lesen. Er unterscheidet sich von den chinesischen Versionen, die die anderen
+hier zitierten Autoren präsentieren, höchstens in der Punktion.
+
+Die mittlere Spalte meiner Lernversion präsentiert den japanischen Text in
+europäischer Umschrift. Sie folgt -- mit drei Ausnahmen -- dem Text von
+Deshimaru\footcite[vgl.][30]{Deshimaru1988a} und ist ebenfalls von links nach
+rechts und von oben nach unten zu lesen. Die erste Ausnahme betrifft das Wort
+\emph{bo sa} in Zeile [006]. Hier steht bei Deshimaru \emph{bo satsu}. Die
+zweite Ausnahme betrifft das Wort \emph{ze} in Zeile [061]. Hier steht bei
+Deshimaru \emph{ze(tsu)}. Da in der Sangha, zu der ich mich hingezogen
+fühle\footcite[vgl.][\nopage]{DaiShinZen2016a}, die Silbe \emph{tsu} nicht
+gesprochen wird, habe ich mir erlaubt, es in meiner Lernversion zu unterdrücken.
+Inhaltlich entsteht dadurch keine Veränderung, phonetisch nur eine geringe: das
+auslautend \emph{u} wird im Japanischen fast nicht gesprochen, jedenfalls noch
+weniger als das deutsche Auslaut-e in \emph{Stange} oder \emph{Karte}. Die
+dritte Ausnahme betrifft die Groß- und Kleinschreibung: ich habe die konsequente
+Kleinschreibung der Version von Scheid übernommen. Die Großschreibung nach einem
+Punkt signalisiert harte syntaktische Abschlüsse, die semantisch so nicht
+stimmen.
+
+Meine Übersetzung ins Deutsche folgt in der Regel der anregenden, wortweisen
+Übersetzung von Boeck\footcite[vgl.][\nopage]{Boeck2016a}, allerdings im
+Abgleich mit den Erläuterungen von Deshimaru und Scheid. Mein eigenes Zutun
+wollte von Anfang an nicht mehr bieten als eine geschickte Anordnung, bei der
+eine möglichst wortgetreue Übersetzung zeilenmäßig in der Nähe der zu
+übersetzenden Phrase bleibt. Das Hannya Shingyo sollte in sinnhaften Einheiten
+lernbar gemacht werden. Um das zu erreichen, habe ich die großen syntaktischen
+Freiheiten der deutschen Sprache genutzt: im Zweifel habe ich die etwas
+geschrobenere Formulierung mit genauer Zuordnung der eleganteren, aber
+entfernenden vorgezogen.
+
+Um meine eher syntaktisch motivierten Zutaten als solche zu kennzeichnen, habe
+ich sie in eckige Klammern eingeschlossen und kursiv gesetzt. Der deutsche Text
+sollte sich mit diesen Zutaten schlüssig von links nach rechts und oben nach
+unten lesen lassen. Unmarkierte deutsche Wörter sollten in der Zeile stehen, in
+denen auch die chinesischen und japanischen Korrelate stehen - jedoch nicht
+immer in derselben Reihenfolge, wie die Originale.
+
+Und noch zwei letzte typographische Aufschlüsselung: 
+
+\begin{enumerate}
+  \item Die chinesische Schrift ist eine Begriffsschrift. Trotzdem enthält sie
+  auch syntaktische Konnektoren, etwa die Negationen \emph{mu} (= \cnbsmi{無})
+  und  \emph{fu} (= \cnbsmi{不}), die additive Konjunktion \emph{yaku} (=
+  \cnbsmi{亦} = auch), die einfache Schlussfolgerung \emph{ko} (= \cnbsmi{故} =
+  darum) oder die betonte Schlussfolgerung \emph{nai shi} (= \cnbsmi{乃}
+  \cnbsmi{至} = darum insbesondere)\footnote{Boeck übersetzt \emph{fu} mit der
+  deutschen Vorsilbe \emph{un-} und \emph{mu} mit der expliziten Negation
+  \emph{nicht}. \emph{yaku} übersetzt er ebenfalls als auch. \emph{ko} übersetzt
+  er wörtlich als \emph{Ursache}. Und \emph{nai shi} übersetzt er als \emph{dann
+  extrem}, was ich als \emph{darum inbesondere}
+  übernehme.\cite[vgl][\nopage]{Boeck2016a}}. Diese Patikel strukturieren den
+  Text logisch. Deshalb habe ich sie in der linearen Anordnung jeweils nach
+  links herausgezogen. Im selben Sinne habe ich auch einige andere, gliedernde
+  Partikel optisch arrangiert.
+  \item Im Text erscheint gelegentlich ein verweisender Pfeil
+  \emph{$\rightarrow$}. Zu diesen Zeilen gibt es eine Erläuterung der
+  Übersetzung. Die Zeilennummern werden im Kapitel mit den Übersetzungshinweisen
+  als Referenz benutzt.
+\end{enumerate}
+
+\section{Die Übersetzung} 
+
+Einige Entscheidungen habe ich im folgenden erläutert. Mit ist natürlich klar,
+dass eine wirklich wissenschaftliche Aufbereitung viele Aspekte und Behauptungen
+nachweisen müsste, auf die ich hier ohne Nachweis zurückgreife. Sie sind das
+Ergebnis der Arbeit der anderen Autoren. Ihnen gebührt dafür Respekt,
+Anerkennung und Dank, nicht mir. In einer späteren Version werde ich die
+Nachweise sicher nachholen. Bis dahin möge man mir nachsehen, dass ich einfach
+nur eine besser zu lernende Version erstellen wollte.
+
+\begin{description}
+
+  \item[001-003:] Das Hannya Shingyo ist ursprünglich in Sanskrit geschrieben,
+  von dort ins Chinesische übertragen und von da aus ist es dann noch einmal ins
+  Japanische übersetzt worden. Das Chinesische selbst ist eine Begriffsschrift,
+  sodass sich die Übersetzung ins Japanische auf die Definition einer 'anderen'
+  Aussprache konzentrieren konnte. Allerdings hatte die chinesische Version
+  einige ursprüngliche Formulierung als 'wörtliche Zitate' bewahrt. Dabei ist
+  die Aussprache des Sanskrit mit chinesischen Silben lautlich nachgebildet
+  worden. Die Übertragung ins Japanische hat diese Idee übernommen.
+  Damit entsteht jedoch eine 'Doppeldeutigkeit'. Denn die das Sanskrit mehr oder
+  minder gut nachbildenden japanischen Wörter und Silben haben natürlich eine
+  eigene unabhängige Bedeutung. Dem entsprechend wird gelegentlich gesagt, die
+  Übertragungen hätten die Bedeutung des Hannya Shingyos
+  \enquote{vertieft}\footcite[vgl.][56]{Deshimaru1988a}. Das \emph{Hannya
+  Shingyo} als Name des Textes ist jedenfalls das erste Zitat aus dem Sanskrit.
+
+  \item[005-006:] Der Ausdruck \emph{kan ji zai bo sa} bildet auch ein solches
+  lautliches Zitat, allerdings in etwas \emph{verschleierter Form}: er soll den
+  Ausdruck \emph{Boddhisattva Avalokiteshvara} wiedergeben. Dabei beziehen sich
+  die Silben \emph{bo sa} direkt auf auf den Titel \emph{Boddhisattva}.
+  Titelträger ist im Original \emph{Avalokitesvara}, ein Schüler von Buddha.
+  Dieser hat einen Beinamen gehabt, auf den sich die Silben \emph{kan} (=
+  \emph{beobachten}) und \emph{ji zai} (= \emph{Freiheit})  beziehen . Darum
+  kann man den Namen nicht unübersetzt in einen deutschen Text übernehmen: es
+  wird hier eben nicht über eine konkrete Einzelperson gesprochen. Vielmehr
+  fungiert diese konkrete Person als Typus. Die so verallgemeinerte Aussage
+  erlaubt es dem Hörer, sich einbezogen zu fühlen. Um das im Deutschen
+  nachzubilden, nutze ich den unbestimmten Artikel und folge ansonsten der
+  Deutung von Deshimaru\footcite[vgl.][57 et passim]{Deshimaru1988a}.
+
+  \item[004,011:] \emph{ji} (= \cnbsmi{時}) soll \emph{Zeit} bedeuten und wird
+  als Konjunktion zumeist mit \emph{als} oder \emph{während} übersetzt. Im
+  deutschen kennen wir zwei Arten der 'zeitlichen' Verbindung zweier Fakten. Die
+  eine betont eher die Zufälligkeit, die andere die Ursächlichkeit:
+  \emph{\underline{als} ich Zucker aß, bekam ich Kopfschmerzen} meint etwas
+  anderes als, \emph{\underline{indem} ich Zucker aß, bekam ich Kopfschmerzen}.
+  Im Hannya Shingyo ist eine ursächliche Verknüpfung gemeint: \emph{Das
+  Praktizieren der Höchsten Wahrheit führt zu der Erkenntnis, dass \ldots}. Das
+  Wort \emph{indem} markiert diese ursächliche Beziehung gut.
+
+  \item[014:] Die 5 Skandhas -- nämlich \emph{Empfindung, Wahrnehmung, Gedanken,
+  Handeln und Bewusstsein} -- bilden eine zentrale Achse des Textes:
+  zuerst wird ihr Oberbegriff \emph{go on} (= \cnbsmi{五} \cnbsmi{蘊}) genannt.
+  Danach wird von jeder einzelnen gesagt, sie sei nicht nur nicht getrennt von
+  \emph{kū}, sondern sie sei \emph{kū} (020-039). Schließlich wird auch gesagt,
+  dass es sie in \emph{kū} ansich nicht gäbe (050-054), genauso wenig, wie
+  entsprechenden Organe (055-060) oder deren Resulte (061-66). Dem liegt ein
+  Weltbild zugrunde, das sicher nicht mehr unseres ist. Deshalb ist es
+  angemessen, den fremden Begriff 'Skandha' als \emph{Fremdwort} in die
+  Übersetzung zu übernehmen. Allerdings: die Pointe des Hannya Shingyos, dass es
+  das, was dieses fremde Weltbild beschreibt, in \emph{kū} nicht gäbe, ließe
+  sich umstandlos auch mit unserem heutigen physisch / psychischen Weltbild
+  formulieren. Man muss sich also die 'veraltete' Sichtweise nicht zu eigen
+  machen, um das Hannya Shingyo zu verstehen und seine Aussage zu bejahen. Das
+  Hannya Shingyo ist -- so gesehen -- sehr modern.
+  
+  \item[021:] Es ist üblich, \emph{shiki} mit \emph{Form} zu übersetzen. Das
+  wird der rhetorischen Form des Textes aber nicht gerecht: \emph{shiki} ist die
+  erste der 5 Skandas. Die anderen 4 werden in den Zeilen [035-038] aufglistet.
+  Die Übersetzung von \emph{shiki} muss auch das 1. Skandha schon als Teil einer
+  Reihe erscheinen lassen. Dazu eignet sich das Wort \emph{Form} nicht.
+
+  \item[021-033:] Außerdem wird diese ganze Sentenz gelegentlich zu der Aussage
+  verknappt, \emph{Form sei Leere und Leere sei Form}. Damit geht eine -- auch
+  rhetorisch entscheidende -- Pointe des Originals verloren: Zuerst sagt das
+  Hannya Shingyo, \emph{shiki}, die \emph{Erscheinung} sei nicht getrennt von
+  \emph{kū}. Dies muss den Hörer verwirren. Denn das normale Verständnis besagt
+  doch wohl eher, dass es sich dabei um verschiedene Dinge handelt. Und mit
+  diesem Erwartungshorizont spielt der Text. Denn er setzt danach -- sozusagen
+  -- 'noch eins drauf': Er verschäft die Situation, in dem er sagt, dass die
+  \emph{Erscheinung} und \emph{kū} nicht nur nicht getrennt seien, sondern dass
+  das eine realiter auch das andere \emph{sei}. Rhethorisch gesehen präsentiert
+  das Hannya Shingyo also zuerst eine 'steile' These, die es im folgenden wird
+  erläutern und begründen müssen. Auf jeden Fall -- und das ist der rednerische
+  Zweck dieses Vorgehens -- hat es mit dieser Konstruktion die Aufmerksamkeit
+  seiner Hörer geweckt. Darum ist es notwendig, diese rhethorische Verschärfung
+  auch in der Übersetzung zu erhalten.
+  
+  \item[022:] Oft wird \emph{i} mit \emph{verschieden} übersetzt. Das wird dem
+  Original nicht gerecht. Denn tatsächlich geht es im folgenden Text [044-087],
+  in dem \emph{kū} ex negativo definiert wird, um nichts anderes, als die
+  Feststellung von Unterschieden.  Die Pointe des Hannya Shingyos ist aber, dass
+  \emph{kū} trotz aller Verschiedenartigkeit dennoch -- irgendwie -- mit den 5
+  Skandhas zusammenfällt, also trotz aller Verschiedenartigkeit nicht getrennt
+  ist von \emph{shiki}. Darum habe ich mich für das Übersetzung \emph{getrennt}
+  entschieden; es unterstreicht die intellektuelle Brisanz des Hannya Shingyos.
+
+  \item[023ff:] Es ist üblich, \emph{kū} mit dem Wort \emph{Leere} zu
+  übersetzen. Allerdings bringt das Wort \emph{Leere} eigene Konnotationen mit,
+  die dem eigentlich Gemeinten entgegenstehen. Das Problem schillernder Begriffe
+  kennt pikanterweise sogar das Hannya Shingyo selbst, mehr noch: es spielt
+  sogar mit dem Phänomen: Es nimmt nämlich einen dem Gemeinten nahestehenden,
+  vermeintlich klaren Begriff \emph{kū} und schärft diesen mittels Aussagen
+  darüber, was das Gemeinte alles \emph{nicht} ist. Solch ein Verfahren nennt
+  man eine \emph{Ex-Negativo-Definition}. Tatsächlich besteht das Hannya Shingyo
+  im Kern aus einer Liste von negierenden Abgrenzungen [044-087]. Aus diesem
+  Grund ist es besser, nicht das auch durch die europäische Philosophie
+  aufgeheizte Wort \emph{Leere} durch vielfache Wiederholgungen zum Kern zu
+  machen, sondern das Original -- also \emph{kū} --  zu verwenden und dessen
+  Bedeutung gerade über Negationen klarwerden zu lassen.
+
+  \item[050:] \emph{ze ko} (= \cnbsmi{是} \cnbsmi{故}) steht für \emph{sein
+  Ursache}. Während ich später in Zeile [095ff] \emph{ko} konsequent als
+  \emph{darum} übersetze, um den repitiven Charakter zu erhalten, wähle ich hier
+  - zu Beginn der Deduktion - das stärkere und elegantere \emph{mithin} als
+  Übersetzung.
+  \item[072:] \emph{nai shi} besagt für sich genommen \emph{dann extrem}. Es
+  geht also um eine besonders wichtige Schlussfolgerung. Solch ein sprachliches
+  Konstrukt kennen wir auch im Deutschen, nämlich die einleitende Formel:
+  \emph{Darum ist/wird/\ldots inbesondere \ldots}.
+
+  \item[071-073:] Die Kombination \emph{gen kai} (= \cnbsmi{眼} \cnbsmi{界}) steht
+  wörtlich für \emph{[Auge Welt]}, die Sequenz \emph{i shiki kai} (= \cnbsmi{意}
+  \cnbsmi{識} \cnbsmi{界}) hingegen für \emph{Denkvermögen Unterscheiden Welt}.
+  Erstere meint also die sichtbare, die erscheinende Welt, letztere die Welt der
+  trennenden Vorstellungen und Konzepte. Auch in dieser Gegenüberstellung trifft
+  man indirekt die fünf Skandas wieder: Zeile [058] hat schon \emph{gen} (= das
+  \emph{Auge}) dem ersten Skandha \emph{shiki} (= \cnbsmi{色} =
+  \emph{Erscheinen}) aus Zeile [053] als Organ zugeordnet. Für das fünfte
+  Skandha, das Unterscheiden als intellektuelles Tun -- japanisch ebenfalls
+  \emph{shiki} genannt -- wird ein anderes Zeichen benutzt als für das erste
+  Skandha, nämlich \cnbsmi{識} (Zeile [057]. Und eben dieses zweite \emph{shiki}
+  erscheint auch in Zeile [073]. Die rhetorische Konstruktion 'von \emph{gen
+  kai} bis \emph{shiki kai} spannt also indirekt erneut den ganzen Bogen über
+  alle fünf Skandhas auf.
+
+  \item[074-080:] Die rhetorische Konstruktion \emph{Es gibt in kū nicht XYZ}
+  und \emph{Es gibt in kū kein Ende von XYZ} ist besonders aufreizend für
+  (europäische) Logiker: Ersteres negiert die Existenz von XYZ; letzteres setzt
+  seine Existenz voraus und betont diese durch den impliziten Hinweis auf seine
+  Ewigkeit, ausgedrückt durch eine doppelte Verneinung. Damit widersetzt sich
+  das Hannya Shingyo der formalen Logik, in dem es dem europäischen Verständnis
+  sein \emph{tertium datur} entgegenstellt, nicht ohne diese Logik allerdings
+  selbst souverän zu benutzen. Dem Zen entsprechend ist das kein Widerspruch,
+  sondern geradezu der Sinn allen Tuns: alle gedanklichen Konstrukte müssen
+  aufgehoben werden, wenn \emph{kū} selbst im  Akt der Erleuchtung erfahrbar
+  werden soll.
+
+  \item[111-113:] Auch die Sentenz \emph{anokutara sanmyaku sanbodai} ist eine
+  zitierende Sanskritnachahmung und meint \emph{höchste, vollkommene
+  Erleuchtung}\footcite[vgl.][\nopage Anm. 10]{Scheid2016a}. Welches der Worte
+  was bedeutet, habe ich den Quellen bisher nicht entnehmen können. Meine
+  Zuordnung ist also willkürlich, folgt aber der Tradition.
+
+  \item[115-121:] Hier findet eine rhetorisch geniale Umdeutung statt, die eine
+  große Auswirkung auf den Buddhismus hat: Bisher war der Begriff \emph{han nya
+  ha ra mi ta} beschreibend. Er stand für die \emph{die höchste Weisheit, die
+  über sich hinausführt}. Jetzt wird der Ausdruck zum Namen des Textes selbst:
+  indem er mehrfach als herausgehobenes \emph{Mantra} bezeichnet wird,
+  verschiebt sich seine Bedeutung: der Terminus \emph{han nya ha ra mi ta} wird
+  zum Namen des Textes. Und in dem diesem dann auch noch eine Wirkung
+  zugesprochen wird, wird seine Rezitation zu einem Mittel. Kein Wunder also,
+  dass alle Buddhisten diesen Text rezitieren: es steckt in ihm selbst.
+ 
+  \item[119:] Die Phrase \emph{mu jō shu} verwendet wieder einmal eine der im
+  \emph{Hannya Shingyo} so gern genutzte 'negative Zuschreibungen':
+  \emph{mu} (= \cnbsmi{無}) ist die bekannte Verneinigung; und \emph{shu} (=
+  \cnbsmi{咒}) steht für das \emph{Mantra}. Also wird \emph{jō} (= \cnbsmi{上})
+  ein Attribut sein, das negiert dem Objekt \emph{Mantra} zugsprochen wird:
+  Ein chinesisch-deutsches Internetlexikon sagt, das \cnbsmi{上} auch für
+  \emph{von unten nach oben, aufwärts} bzw. \emph{vorwärts gehen}
+  steht\footcite[vgl.][\nopage]{babla2016a}. Eine gute Übersetzung würde auch an
+  dieser Stelle -- auf der Basis dieser Primärbedeutung -- die bevorzugte
+  Methode der Eingrenzung ohne direkte Spezifikation bewahren; sie würde diese
+  'ZEN gemäße' Art des 'Denkens' auch hier verdeutlichen. Hier fehlt mir noch
+  eine gute Idee für die Umsetzung.
+
+  \item[125-126:] \emph{shin jitsu}(= \cnbsmi{真} \cnbsmi{實}) soll
+  \emph{Realität} meinen, und \emph{fu ko} (= \cnbsmi{不} \cnbsmi{虛} ) für
+  \emph{nicht/keine Unwahrheit} stehen. Ersteres übersetze ich mit
+  \emph{wirklich}, letzteres müsste dann \emph{wahr} heißen. Ich belasse
+  letzteres aber bei \emph{nicht unwahr}, um die Neigung des Hannya Shingyos zur
+  (doppelten) Verneinung zu erhalten.
+\end{description}
+
+% insert the bibliographical data here
+\bibliography{bibfiles/hsResourcesDe}
+
+\end{document}
