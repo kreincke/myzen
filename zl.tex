@@ -1,0 +1,102 @@
+% zenliteratur cloak file
+%
+% (c) Karsten Reincke, Frankfurt a.M. 2016, ff.
+%
+% This file is licensed under the Creative Commons Attribution 3.0 Germany
+% License (http://creativecommons.org/licenses/by/3.0/de/): Feel free to share
+% (to copy, distribute and transmit) or to remix (to adapt) it, if you respect
+% how you must attribute the work in the manner specified by the author(s):
+%
+% In an internet based reuse please link the reused parts to 
+% http://www.fodina.de/myzen/ and mention the original author Karsten Reincke in 
+% a suitable manner.
+% 
+% In a paper-like reuse please insert into your preface etc. a short hint to
+% http://www.fodina.de/myzen/ and to the original author, Karsten Reincke, .
+% 
+% For normal quotations please use the scientific standard to cite.
+
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true,toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english,ngerman]{babel}
+\selectlanguage{ngerman}
+
+%set langauge specific quotes
+\usepackage{csquotes}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{btexmat/zenJbibCfgDeInc}
+
+% language specific hyphenation
+\input{btexmat/zenHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+%integrate nomenclature
+\input{btexmat/zenNclMetaDefineDeInc}
+
+\begin{document}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+%\titlehead{English Configuration}
+\subject{Zen Literatur}
+\title{Kommentiertes Literaturverzeichnis}
+\author{Karsten Reincke\input{btexmat/zenLicenseFootnoteInc}}
+
+\maketitle
+%%-- end(titlepage)
+
+\small
+% insert nomenclature data here
+%\input{btexmat/zenNclMetaLocInsDeInc}
+% insert bibliographical data here
+\bibliography{bibfiles/hsResourcesDe.bib}
+
+\end{document}
