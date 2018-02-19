@@ -93,6 +93,9 @@
 \jurabibsetup{annote}
 \renewcommand*{\jbannoteformat}[1]{{ \itshape #1 }}
 
+\renewcommand*{\biburlprefix}{ ( $\rightarrow$ }
+\renewcommand*{\biburlsuffix}{ )}
+
 %refine the prefix of url download
 \AddTo\bibsgerman{\renewcommand*{\urldatecomment}{Referenzdownload: }}
 
@@ -115,3 +118,4 @@
     \def\incollinname{\ifjboxford in:\else\ifjbchicago in:\else in:\fi\fi}%
   }{}{}%
 }
+
