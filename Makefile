@@ -11,8 +11,7 @@ T=CH
 
 
 all:
-	make README.pdf
-	@ mv README-`cat mycsrf.rel`.pdf README.pdf
+	make hs.pdf
 	
 .SUFFIXES: .tex .dvi .ps .pdf .rtf
 
@@ -60,8 +59,8 @@ clear:	clearAuxFiles
 clean: 	clear clearResFiles
 
 dclear: clear
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clear && cd ..; done)
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clear && cd ..; )
 
 dclean: clean
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clean && cd ..; done)
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clean && cd ..; )
 

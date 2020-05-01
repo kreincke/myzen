@@ -1,3 +1,5 @@
+# the eclipse proect files refers the local envorinments
+.project
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
